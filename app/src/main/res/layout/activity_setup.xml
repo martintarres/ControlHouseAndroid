@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoActivities"
+    tools:context="com.example.appcontrolhouseandroid.SetupActivity">
+
+    <TextView
+        android:id="@+id/textoConectadoSetup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Conectado a Central"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textoPantallaConfiguracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="212dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="PANTALLA DE CONFIGURACIÓN"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/textoConectadoSetup"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="22dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/textoPantallaConfiguracion"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_settings_black_48" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="840dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/background_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.014"
+        app:srcCompat="?attr/actionBarDivider" />
+
+    <ImageButton
+        android:id="@+id/botonIrPantallaPrincipalConfig"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/boton_redondo"
+        android:onClick="onClick"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_left_black_48" />
+
+
+    <ScrollView
+        android:layout_width="1000dp"
+        android:layout_height="485dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fondoActivities"
+            android:visibility="visible"
+            tools:context="com.example.appcontrolhouseandroid.SetupActivity">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="840dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/background_dark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TextoTiempoParaDesactivar"
+                app:srcCompat="?attr/actionBarDivider" />
+
+            <Spinner
+                android:id="@+id/spinnerTiempoAlarma"
+                android:layout_width="206dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="200dp"
+                android:clickable="true"
+                android:fontFamily="@font/rubik_medium"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/TextoTiempoParaDesactivar"
+                android:layout_width="337dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="240dp"
+                android:layout_marginTop="56dp"
+                android:fontFamily="@font/rubik_medium"
+                android:text="TIEMPO PARA DESACTIVAR LA ALARMA"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/constraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="88dp"
+                android:background="@color/fondoActivities"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TextoTiempoParaDesactivar"
+                tools:context=".MainActivity">
+
+                <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="367dp"
+                    android:layout_height="493dp"
+                    android:layout_gravity="center"
+                    android:columnCount="3"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+                        android:id="@+id/boton1"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="onClick"
+                        android:textSize="30sp"
+                        android:text="1" />
+
+                    <Button
+                        android:id="@+id/boton2"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="onClick"
+                        android:textSize="30sp"
+                        android:text="2" />
+
+                    <Button
+                        android:id="@+id/boton3"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="onClick"
+                        android:textSize="30sp"
+                        android:text="3" />
+
+                    <Button
+                        android:id="@+id/boton4"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="onClick"
+                        android:textSize="30sp"
+                        android:text="4" />
+
+                    <Button
+                        android:id="@+id/boton5"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="onClick"
+                        android:textSize="30sp"
+                        android:text="5" />
+
+                    <Button
+                        android:id="@+id/boton6"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="onClick"
+                        android:textSize="30sp"
+                        android:text="6" />
+
+                    <Button
+                        android:id="@+id/boton7"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="onClick"
+                        android:textSize="30sp"
+                        android:text="7" />
+
+                    <Button
+                        android:id="@+id/boton8"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="onClick"
+                        android:textSize="30sp"
+                        android:text="8" />
+
+                    <Button
+                        android:id="@+id/boton9"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="onClick"
+                        android:textSize="30sp"
+                        android:text="9" />
+
+                    <Button
+                        android:id="@+id/boton0"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="onClick"
+                        android:textSize="30sp"
+                        android:text="0" />
+
+                    <Button
+                        android:id="@+id/boton00"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="onClick"
+                        android:textSize="30sp"
+                        android:text="00" />
+
+                    <ImageButton
+                        android:id="@+id/botonDelete"
+                        android:layout_row="3"
+                        android:textSize="30sp"
+                        android:layout_column="2"
+                        android:background="@drawable/boton_redondo"
+                        android:onClick="onClick"
+                        app:srcCompat="@drawable/baseline_keyboard_backspace_black_48" />
+
+
+                </GridLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textoConfiguracionTiempoSonar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/rubik_medium"
+                android:text="Configuracion de Tiempo Alarma"
+                app:layout_constraintBottom_toTopOf="@+id/TextoTiempoParaDesactivar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textoConfigracionClaves"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/rubik_medium"
+                android:text="Configracion de Claves"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+            <TextView
+                android:id="@+id/textoIngresePasswordDesbloqueo"
+                android:layout_width="385dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/rubik_medium"
+                android:text="INGRESE LA CONTRASEÑA PARA DESBLOQUEAR"
+                android:textSize="16sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.545"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoConfigracionClaves" />
+
+            <TextView
+                android:id="@+id/textoMostrarPasswordDesbloqueoConfiguracion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/rubik_medium"
+                android:textSize="16sp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@+id/textoIngresePasswordDesbloqueo"
+                app:layout_constraintTop_toBottomOf="@+id/textoConfigracionClaves" />
+
+            <ListView
+                android:id="@+id/list1"
+                android:layout_width="320dp"
+                android:layout_height="328dp"
+                android:layout_marginTop="136dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/rubik_medium"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.813"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerTiempoAlarma" />
+
+            <ImageButton
+                android:id="@+id/botonBorrarLista"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="51dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="76dp"
+                android:onClick="onClick"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toStartOf="@+id/list1"
+                app:layout_constraintTop_toBottomOf="@+id/botonAgregarClaves"
+                app:srcCompat="@drawable/round_delete_black_48" />
+
+            <ImageButton
+                android:id="@+id/botonAgregarClaves"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="456dp"
+                android:onClick="onClick"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoConfigracionClaves"
+                app:srcCompat="@drawable/round_add_black_48" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

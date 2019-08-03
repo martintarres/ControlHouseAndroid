@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoActivities"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textoConectadoAlarma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Conectado a Central"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="346dp"
+        android:layout_height="711dp"
+        android:layout_marginTop="88dp"
+        android:background="@color/fondoActivities"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextoTiempoParaDesactivar"
+        tools:context=".MainActivity">
+
+        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/gridLayout"
+            android:layout_width="311dp"
+            android:layout_height="579dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="188dp"
+            android:columnCount="3"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/boton1Alarma"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/boton_redondo"
+                android:onClick="onClick"
+                android:text="1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/boton2Alarma"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/boton_redondo"
+                android:onClick="onClick"
+                android:text="2"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/boton3Alarma"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/boton_redondo"
+                android:onClick="onClick"
+                android:text="3"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/boton4Alarma"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/boton_redondo"
+                android:onClick="onClick"
+                android:text="4"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/boton5Alarma"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/boton_redondo"
+                android:onClick="onClick"
+                android:text="5"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/boton6Alarma"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/boton_redondo"
+                android:onClick="onClick"
+                android:text="6"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/boton7Alarma"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/boton_redondo"
+                android:onClick="onClick"
+                android:text="7"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/boton8Alarma"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/boton_redondo"
+                android:onClick="onClick"
+                android:text="8"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/boton9Alarma"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/boton_redondo"
+                android:onClick="onClick"
+                android:text="9"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/boton0Alarma"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/boton_redondo"
+                android:onClick="onClick"
+                android:text="0"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/boton00Alarma"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/boton_redondo"
+                android:onClick="onClick"
+                android:text="00"
+                android:textSize="30sp" />
+
+            <ImageButton
+                android:id="@+id/botonDeleteAlarma"
+                android:layout_row="2"
+                android:background="@drawable/boton_redondo"
+                android:onClick="onClick"
+                android:textSize="30sp"
+                app:srcCompat="@drawable/baseline_keyboard_backspace_black_48" />
+
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/textoNumerosPulsadosAlarma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:password="true"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.596" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/botonIrPantallaPrincipalAlarma"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="64dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/boton_redondo"
+        android:onClick="onClick"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_left_black_48" />
+
+    <Button
+        android:id="@+id/textoPlantaBaja"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="false"
+        android:drawableRight="@drawable/round_done_black_48"
+        android:fontFamily="@font/rubik_medium"
+        android:text="PLANTA BAJA"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textoPlantaAlta"
+        app:layout_constraintStart_toEndOf="@+id/divider" />
+
+    <Button
+        android:id="@+id/textoPlantaAlta"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:drawableRight="@drawable/round_done_black_48"
+        android:fontFamily="@font/rubik_medium"
+        android:text="PLANTA ALTA"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textoPuertaPrincipal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/divider" />
+
+    <Button
+        android:id="@+id/textoPuertaPrincipal"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="false"
+        android:drawableRight="@drawable/round_done_black_48"
+        android:fontFamily="@font/rubik_medium"
+        android:text="PUERTA PRINCIPAL"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textoPuertaTrasera"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/textoPuertaTrasera"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="false"
+        android:drawableRight="@drawable/round_done_black_48"
+        android:fontFamily="@font/rubik_medium"
+        android:text="PUERTA TRASERA"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textoPuertaCuarto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/divider" />
+
+    <Button
+        android:id="@+id/textoPuertaCuarto"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="72dp"
+        android:clickable="false"
+        android:drawableRight="@drawable/round_done_black_48"
+        android:fontFamily="@font/rubik_medium"
+        android:text="PUERTA CUARTO"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/divider" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/divider2"
+        style="@style/AppTheme"
+        android:layout_width="1dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="408dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/botonActivarAlarma"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="258dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/boton_redondeado"
+        android:fontFamily="@font/rubik_medium"
+        android:onClick="onClick"
+        android:text="ACTIVAR ALARMA"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toEndOf="@+id/divider2"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="408dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.791" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="408dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.377" />
+
+    <RadioGroup
+        android:id="@+id/radioGrupo"
+        android:layout_width="208dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="52dp"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toTopOf="@+id/divider3"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toEndOf="@+id/divider2">
+
+        <RadioButton
+            android:id="@+id/radioButtonPuertasSensores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:fontFamily="@font/rubik_medium"
+            android:onClick="onRadioButtonClicked"
+            android:text="PUERTAS Y SENSORES"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPuertas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/rubik_medium"
+            android:text="@string/solo_puertas"
+            android:textSize="16sp"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textoTipoAlarma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Seleccione el tipo de alarma"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toEndOf="@+id/divider2"
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+    <Button
+        android:id="@+id/textoPantallaAlarma"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="259dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:clickable="false"
+        android:drawableLeft="@drawable/round_home_black_48"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="PANTALLA ALARMA"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/divider4"
+        app:layout_constraintStart_toStartOf="@+id/divider4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textoAlarmaActiva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="ALARMA ACTIVA"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/divider3"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/divider3"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

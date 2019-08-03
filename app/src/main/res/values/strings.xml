@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">appControlHouseAndroid</string>
+    <string name="tab_a_label">1</string>
+    <string name="tab_b_label">2</string>
+    <string name="tab_c_label">3</string>
+    <string name="title_activity_luces">LucesActivity</string>
+    <string name="solo_puertas">SOLO PUERTAS</string>
+</resources>

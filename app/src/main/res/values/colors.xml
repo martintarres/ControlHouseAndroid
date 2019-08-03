@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#F44336</color>
+    <color name="colorAccent">#F3D6AA</color>
+    <color name="fondoActivities">#F3D6AA</color>
+    <color name="black">#000000</color>
+    <color name="fondoBotonApretado">#ECAE50</color>
+    <color name="fondoActivarAlarma">#E4BD84</color>
+</resources>
